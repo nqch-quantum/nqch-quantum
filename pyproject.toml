@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "nqch-quantum"
-version = "0.1.0"
+version = "0.1.1"
 description = "NQCH Quantum Computing Cloud Client"
 authors = ["NQCH"]
 license = "Apache License 2.0"
