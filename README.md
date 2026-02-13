@@ -1,8 +1,5 @@
 # NQCH Quantum Cloud Client
 
-The documentation of the project can be found
-[here](https://qibo.science/nqch-quantum/stable/).
-
 ## Install
 
 Install first the package dependencies with the following commands.
