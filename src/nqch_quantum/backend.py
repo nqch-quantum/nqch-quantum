@@ -93,3 +93,7 @@ class MetaBackend:
     def load(**kwargs):
         """Load the NQCH Qibo backend."""
         return NQCHBackend(**kwargs)
+        
+    @staticmethod
+    def list_available():
+        return True
