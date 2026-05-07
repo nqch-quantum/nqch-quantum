@@ -941,14 +941,14 @@ test = ["fakeredis[lua]", "greenlet", "grpcio", "kaleido (<0.4)", "moto", "proto
 
 [[package]]
 name = "packaging"
-version = "24.2"
+version = "26.2"
 description = "Core utilities for Python packages"
 optional = false
 python-versions = ">=3.8"
 groups = ["main", "test"]
 files = [
-    {file = "packaging-24.2-py3-none-any.whl", hash = "sha256:09abb1bccd265c01f4a3aa3f7a7db064b36514d2cba19a2f694fe6150451a759"},
-    {file = "packaging-24.2.tar.gz", hash = "sha256:c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f"},
+    {file = "packaging-26.2-py3-none-any.whl", hash = "sha256:5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e"},
+    {file = "packaging-26.2.tar.gz", hash = "sha256:ff452ff5a3e828ce110190feff1178bb1f2ea2281fa2075aadb987c2fb221661"},
 ]
 
 [[package]]
@@ -1166,14 +1166,14 @@ files = [
 
 [[package]]
 name = "qibo"
-version = "0.2.23"
+version = "0.3.2"
 description = "A framework for quantum computing with hardware acceleration."
 optional = false
 python-versions = "<3.14,>=3.10"
 groups = ["main"]
 files = [
-    {file = "qibo-0.2.23-py3-none-any.whl", hash = "sha256:1bd93a91ad4f3c23e8cb1db9231665e24921a044bd2f752574af0e36b6c7d860"},
-    {file = "qibo-0.2.23.tar.gz", hash = "sha256:7727e583d56589cfd48ef2cfbbd029e5356cf32c4645e6b7e0f1d70f07ccc758"},
+    {file = "qibo-0.3.2-py3-none-any.whl", hash = "sha256:c6883daa7fe664f916e069fe345156631daf5e598e55044e6891b8200aaf6400"},
+    {file = "qibo-0.3.2.tar.gz", hash = "sha256:8f21d98ebee9d8575b5ee6bcd6d9cebbb37ebb34960eebd79037b622f34ff798"},
 ]
 
 [package.dependencies]
@@ -1194,23 +1194,26 @@ qulacs = ["qulacs (>=0.6.4,<0.7.0) ; python_version < \"3.13\""]
 
 [[package]]
 name = "qibo-client"
-version = "0.2.1"
+version = "0.2.4"
 description = "Qibo client interface."
 optional = false
 python-versions = "<3.14,>=3.10"
 groups = ["main"]
 files = [
-    {file = "qibo_client-0.2.1-py3-none-any.whl", hash = "sha256:9aa594b36abb2771e717b6ddbfb13a73660bf6aa2dfb140a493119b810931444"},
-    {file = "qibo_client-0.2.1.tar.gz", hash = "sha256:3ab8b7e1df8c536b42a2f7647cec3ea367f95817976d76d3f21cd709da848490"},
+    {file = "qibo_client-0.2.4-py3-none-any.whl", hash = "sha256:90c267a6b4b1a531bf7235a4aec9e72935b862b7a0bf9af19a7caae191c62a97"},
+    {file = "qibo_client-0.2.4.tar.gz", hash = "sha256:649b48853291536162c0d8bcd5b64c25700ed4bae101fa0fb270c158c7640eba"},
 ]
 
 [package.dependencies]
-packaging = ">=24.1,<25.0"
+packaging = ">=26.1,<27.0"
 python-dateutil = ">=2.9.0.post0,<3.0.0"
-qibo = ">=0.2.16,<0.3.0"
+qibo = "0.3.2"
 requests = ">=2.31.0,<3.0.0"
-rich = ">=14.1.0,<15.0.0"
+rich = ">=15.0.0,<16.0.0"
 tabulate = ">=0.9.0,<0.10.0"
+
+[package.extras]
+notebook = ["ipywidgets (>=8.1.0,<9.0.0)", "jupyter (>=1.0.0,<2.0.0)"]
 
 [[package]]
 name = "requests"
@@ -1256,14 +1259,14 @@ tests = ["coverage (>=6.0.0)", "flake8", "mypy", "pytest (>=7.0.0)", "pytest-asy
 
 [[package]]
 name = "rich"
-version = "14.3.2"
+version = "15.0.0"
 description = "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal"
 optional = false
-python-versions = ">=3.8.0"
+python-versions = ">=3.9.0"
 groups = ["main"]
 files = [
-    {file = "rich-14.3.2-py3-none-any.whl", hash = "sha256:08e67c3e90884651da3239ea668222d19bea7b589149d8014a21c633420dbb69"},
-    {file = "rich-14.3.2.tar.gz", hash = "sha256:e712f11c1a562a11843306f5ed999475f09ac31ffb64281f73ab29ffdda8b3b8"},
+    {file = "rich-15.0.0-py3-none-any.whl", hash = "sha256:33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb"},
+    {file = "rich-15.0.0.tar.gz", hash = "sha256:edd07a4824c6b40189fb7ac9bc4c52536e9780fbbfbddf6f1e2502c31b068c36"},
 ]
 
 [package.dependencies]
@@ -1687,4 +1690,4 @@ zstd = ["backports-zstd (>=1.0.0) ; python_version < \"3.14\""]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<3.14"
-content-hash = "21a1ba070cb7771c698f306333e9f5dec0cbf728d125309ec69a46372295cc6f"
+content-hash = "63456a78cc005bd592eec777b9a0bcf117d606a40c0eb100507c9163b0c30c89"

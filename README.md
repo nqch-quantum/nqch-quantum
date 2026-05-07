@@ -54,3 +54,45 @@ print(result)
 The `device` name indicates the specific system or machine that will process the
 job. The `project` name corresponds to the project or group to which the user
 belongs and which will be charged for the service usage.
+
+## Qibo backend
+
+The package also exposes a Qibo backend provider, so circuits can be submitted
+using Qibo's backend API.
+
+```python
+import qibo
+from qibo import Circuit, gates
+
+qibo.set_backend(
+    "nqch-quantum",
+    token="your-token",
+    platform="selected_platform",
+    project="project_name",
+    verbosity=False,
+)
+
+circuit = Circuit(2)
+circuit.add(gates.H(0))
+circuit.add(gates.CNOT(0, 1))
+circuit.add(gates.M(0, 1))
+
+result = circuit(nshots=1024)
+print(result.frequencies())
+```
+
+Direct backend execution is also supported when a per-call `verbatim` flag is
+needed.
+
+```python
+backend = qibo.get_backend()
+result = backend.execute_circuit(circuit, nshots=1024, verbatim=True)
+```
+
+### Backend limitations
+
+The NQCH backend submits circuits to remote hardware or cloud systems. Execution
+is shot-based and starts from the device default initial state, so
+`initial_state` is not supported. Exact statevector workflows, gradients,
+autodiff, and local statevector expectations are not generally supported by this
+backend.

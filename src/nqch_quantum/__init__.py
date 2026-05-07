@@ -6,4 +6,5 @@ __version__ = im.version(__package__)
 
 from qibo_client.qibo_job import QiboJob, QiboJobStatus
 
+from .backend import MetaBackend, NQCHBackend
 from .nqch_client import Client
