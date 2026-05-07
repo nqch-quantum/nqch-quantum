@@ -58,6 +58,9 @@ class TestNQCHBackend:
         assert backend.project == "test-project"
         assert backend.verbosity is False
 
+    def test_metabackend_reports_available(self):
+        assert nqch_quantum.MetaBackend.list_available() is True
+
     def test_metabackend_reads_token_from_environment(self, monkeypatch):
         monkeypatch.delenv("NQCH_TOKEN", raising=False)
         monkeypatch.setenv("NQCH_QUANTUM_TOKEN", "env-token")
