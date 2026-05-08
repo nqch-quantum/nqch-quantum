@@ -20,7 +20,8 @@ packages = [{ include = "nqch_quantum", from = "src" }]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.14"
-qibo-client = "^0.2.1"
+qibo = "^0.3.2"
+qibo-client = "^0.2.4"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.3"
